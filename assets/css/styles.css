@@ -68,6 +68,10 @@ header {
     z-index: 999;
 }
 
+header.open {
+    height: 100%;
+}
+
 .logo {
     display: flex;
     justify-content: center;
@@ -97,21 +101,99 @@ header {
 }
 
 .hide {
-    height: 80px!important;
-    width: 0!important;
+    height: 80px !important;
+    width: 0 !important;
     visibility: hidden;
 }
 
-nav ul {
+/* NAVBAR */
+.navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
 }
 
-nav li {
-    margin-left: 1rem;
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.button > a {
+.navbar-item {
+    margin-right: 20px;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 118px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar-item {
+        margin: 10px;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-toggle.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.open span:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg);
+    }
+
+    .navbar-toggle span:nth-child(1) {
+        transform: translateY(0) rotate(0);
+    }
+
+    .navbar-toggle span:nth-child(2) {
+        opacity: 1;
+    }
+
+    .navbar-toggle span:nth-child(3) {
+        transform: translateY(0) rotate(0);
+    }
+
+    .navbar-menu.open {
+        display: flex;
+    }
+}
+
+.button {
     /* background-color: #4CAF50; cor de fundo do botão */
     border: 2px solid #23527c;
     /* remove a borda padrão do botão */
@@ -134,27 +216,11 @@ nav li {
     /* adiciona uma transição suave na cor de fundo */
 }
 
-.button:hover a {
+.button:hover {
     background-color: #1C618C;
     border: 2px solid #1C618C;
-    /* cor de fundo do botão quando hoverado */
-}
-
-.button:hover a {
     color: #fff;
     /* cor de fundo do botão quando hoverado */
-}
-
-
-nav a {
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.8s ease-in;
-    /* adiciona uma transição suave na cor de fundo */
-}
-
-nav a:hover {
-    text-decoration: none;
 }
 
 /* Estilos do banner */

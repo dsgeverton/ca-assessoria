@@ -33,3 +33,11 @@ window.addEventListener('scroll', function () {
         icon.style.display = 'none';
     }
 });
+
+const toggle = document.querySelector('.navbar-toggle');
+const menu = document.querySelector('.navbar-menu');
+
+toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    menu.classList.toggle('open');
+})
