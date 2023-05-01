@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* Estilos globais */
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: #337ab7;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #23527c;
+}
+
+/* Estilos do header */
+header {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.logo img {
+    width: 320px;
+    border-radius: 50px;
+    padding: 1rem;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo .icon img {
+    width: 128px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav li {
+    margin-left: 1rem;
+}
+
+.button>a {
+    /* background-color: #4CAF50; cor de fundo do botão */
+    border: 1px solid #23527c;
+    /* remove a borda padrão do botão */
+    border-radius: 50px;
+    color: #23527c;
+    /* cor do texto do botão */
+    padding: 10px 20px;
+    /* espaço interno do botão */
+    text-align: center;
+    /* centraliza o texto horizontalmente */
+    text-decoration: none;
+    /* remove o sublinhado do texto */
+    display: inline-block;
+    /* torna o botão um bloco de largura ajustável */
+    font-size: 16px;
+    /* tamanho da fonte do texto */
+    cursor: pointer;
+    /* muda o cursor do mouse para a mãozinha */
+    transition: background-color 0.5s ease;
+    /* adiciona uma transição suave na cor de fundo */
+}
+
+.button:hover a {
+    background-color: #23527c;
+    /* cor de fundo do botão quando hoverado */
+}
+
+.button:hover a {
+    color: #fff;
+    /* cor de fundo do botão quando hoverado */
+}
+
+
+nav a {
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.8s ease-in;
+    /* adiciona uma transição suave na cor de fundo */
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
+/* Estilos do banner */
+#banner {
+    background-image: url(../images/banner2.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #23527c;
+    background-attachment: fixed;
+}
+
+#banner h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+#banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    padding: 16px 32px;
+    border-radius: 50px;
+    background-color: #337ab7;
+    color: #444;
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: all .4s ease-in-out;
+}
+
+.cta-btn:hover {
+    color: #337ab7;
+    background-color: #23527c;
+}
+
+/* Estilos das se��es */
+section {
+    padding: 5rem 1rem;
+}
+
+#sobre {
+    background-color: #f7f7f7;
+}
+
+#sobre p {
+    max-width: 800px;
+    margin: auto;
+}
+
+#servicos ul {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: .5rem;
+}
+
+#servicos li {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: .5rem;
+    height: 440px;
+    padding: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Estilos do formul�rio de contato */
+form {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input,
+form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+form textarea {
+    height: 6rem;
+}
+
+/* Estilos do footer */
+footer {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
