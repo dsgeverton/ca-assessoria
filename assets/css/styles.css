@@ -143,7 +143,13 @@ header.open {
     transition: all 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 675px) and (max-width: 940px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 675px) {
     .navbar-menu {
         display: none;
         flex-direction: column;
@@ -300,6 +306,7 @@ section {
     border: 1px solid #ddd;
     border-radius: .5rem;
     height: 440px;
+    min-width: 340px;
     padding: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
@@ -356,4 +363,68 @@ footer {
     background-color: #f7f7f7;
     padding: 1rem;
     text-align: center;
+}
+
+
+
+
+
+.card-carousel {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    
+}
+
+.carousel-container {
+    display: flex;
+    width: calc(100% * 5);
+    transition: transform 0.3s ease-in-out;
+    justify-content: center;
+}
+
+.card {
+    flex: 0 0 calc(100% / 5);
+    margin-right: 20px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-button-prev {
+    left: 10px;
+}
+
+.carousel-button-next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .card-carousel {
+        overflow-x: auto;
+    }
+
+    .carousel-container {
+        width: auto;
+    }
+
+    .card {
+        margin-right: 10px;
+    }
 }
