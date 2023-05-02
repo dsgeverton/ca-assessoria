@@ -3,13 +3,29 @@ const body = document.body;
 
 toggleSwitch.addEventListener('change', switchTheme, false);
 
+window.addEventListener('load', function () {
+    const theme = this.localStorage.getItem('theme');
+    if (theme === 'dark') {
+        darkMode();
+        toggleSwitch.checked = true;
+    }
+})
+
 function switchTheme(e) {
     if (e.target.checked) {
-        console.log('Dark mode enabled');
-        body.classList.add('dark-mode');
+        darkMode();
     }
     else {
-        console.log('Dark mode disabled');
-        body.classList.remove('dark-mode');
-    }    
+        lightMode();
+    }
+}
+
+const darkMode = () => {
+    body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark');
+}
+
+const lightMode = () => {
+    body.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light');
 }
