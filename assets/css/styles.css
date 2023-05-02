@@ -7,10 +7,13 @@
     --color-secondary-200: #123E59;
     --color-text-light: #FFF;
     --color-text-dark: #444;
-    --color-bg-dark-100: #444;
+    --color-bg-dark-glass: #44444460;
+    --color-bg-dark-100: #444444;
     --color-bg-dark-200: #333;
-    --color-bg-light-100: #FFF;
+    --color-bg-light-glass: #FFFFFF60;
+    --color-bg-light-100: #FFFFFF;
     --color-bg-light-200: #F2F2F2;
+    --swiper-theme-color: #7EB6D9;
 }
 
 /* Reset */
@@ -68,7 +71,8 @@ button:hover {
 
 /* Estilos do header */
 header {
-    background-color: var(--color-text-light);
+    background-color: var(--color-bg-light-glass);
+    backdrop-filter: blur(25px);
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -154,7 +158,7 @@ header.open {
     transition: all 0.2s ease-in-out;
 }
 
-@media screen and (min-width: 675px) and (max-width: 940px) {
+@media screen and (min-width: 675px) and (max-width: 1100px) {
     header {
         flex-direction: column;
     }
@@ -162,7 +166,7 @@ header.open {
 
 @media screen and (max-width: 675px) {
     .logo #logo {
-        height: 112px;
+        height: 82px;
     }
 
     .navbar-menu {
@@ -311,10 +315,11 @@ section {
     border: 1px solid #ddd;
     border-radius: .5rem;
     height: 440px;
-    min-width: 340px;
+    width: 340px;
     padding: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
+    background-color: var(--color-bg-light-100);
 }
 
 .card:hover {
@@ -370,20 +375,6 @@ footer {
     text-align: center;
 }
 
-.card-carousel {
-    position: relative;
-    display: flex;
-    overflow-x: hidden;
-
-}
-
-.carousel-container {
-    display: flex;
-    width: calc(100% * 5);
-    transition: transform 0.3s ease-in-out;
-    justify-content: center;
-}
-
 .card {
     flex: 0 0 calc(100% / 5);
     margin-right: 20px;
@@ -393,36 +384,14 @@ footer {
     width: 100%;
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 50%;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.carousel-button-prev {
-    left: 10px;
-}
-
-.carousel-button-next {
-    right: 10px;
+.swiper {
+    width: 60%;
+    height: 460px;
 }
 
 @media (max-width: 768px) {
-    .card-carousel {
-        overflow-x: auto;
-    }
-
-    .carousel-container {
-        width: auto;
+    .swiper {
+        width: 100%;
     }
 
     .card {
@@ -515,9 +484,12 @@ input:checked+.slider:before {
 
 .dark-mode,
 .dark-mode footer,
-.dark-mode header,
-.dark-mode .theme {
-    background-color: #444 !important;
+.dark-mode header {
+    background-color: var(--color-bg-dark-glass) !important;
+}
+
+.dark-mode .theme, .dark-mode .card {
+    background-color: var(--color-bg-dark-100);
 }
 
 .dark-mode .navbar .button {

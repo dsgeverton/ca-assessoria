@@ -24,7 +24,7 @@ window.addEventListener('scroll', function () {
         logoBox.classList.add('transition');
 
         logo.classList.add('hide')
-        
+
         icon.style.display = 'block';
     } else {
         // se não, define a cor de fundo como transparente

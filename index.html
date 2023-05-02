@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CA Assessoria em Informática</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -54,32 +55,51 @@
     </section>
     <section id="servicos">
         <h2>Nossos Serviços</h2>
-        <div class="card-carousel">
-            <div class="carousel-container">
-                <div class="card">
-                    <img src="./assets/images/reparo.jpg" alt="Card 1">
-                    <h3>Formatação</h3>
-                    <p>Oferecemos serviço de formatação de computadores, visando melhorar a performance e a segurança do
-                        seu equipamento. Com a formatação, o sistema operacional é reinstalado e todas as configurações
-                        são redefinidas, deixando o computador mais rápido e livre de vírus e outros problemas.</p>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="./assets/images/reparo.jpg" alt="Card 1">
+                        <h3>Formatação</h3>
+                        <p>Oferecemos serviço de formatação de computadores, visando melhorar a performance e a
+                            segurança do
+                            seu equipamento. Com a formatação, o sistema operacional é reinstalado e todas as
+                            configurações
+                            são redefinidas, deixando o computador mais rápido e livre de vírus e outros problemas.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./assets/images/imagem2.jpg" alt="Card 2">
-                    <h3>Configuração de rede</h3>
-                    <p>Nós oferecemos a configuração e otimização de redes para que sua empresa possa ter uma conexão
-                        rápida e confiável, garantindo que seus dispositivos possam se comunicar de forma eficiente.
-                        Nossa equipe de profissionais altamente qualificados pode ajudar a configurar e gerenciar sua
-                        rede, para que você possa se concentrar no que realmente importa - seus negócios.</p>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="./assets/images/imagem2.jpg" alt="Card 2">
+                        <h3>Configuração de rede</h3>
+                        <p>Nós oferecemos a configuração e otimização de redes para que sua empresa possa ter uma
+                            conexão
+                            rápida e confiável, garantindo que seus dispositivos possam se comunicar de forma eficiente.
+                            Nossa equipe de profissionais altamente qualificados pode ajudar a configurar e gerenciar
+                            sua
+                            rede, para que você possa se concentrar no que realmente importa - seus negócios.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./assets/images/imagem3.jpg" alt="Card 3">
-                    <h3>Consultoria</h3>
-                    <p>Oferecemos um serviço especializado de consultoria em tecnologia da informação para ajudá-lo a
-                        tomar decisões informadas sobre a melhor solução de TI para sua empresa.</p>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="./assets/images/imagem3.jpg" alt="Card 3">
+                        <h3>Consultoria</h3>
+                        <p>Oferecemos um serviço especializado de consultoria em tecnologia da informação para ajudá-lo
+                            a
+                            tomar decisões informadas sobre a melhor solução de TI para sua empresa.</p>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-button carousel-button-prev">&lt;</button>
-            <button class="carousel-button carousel-button-next">&gt;</button>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-scrollbar"></div>
         </div>
     </section>
     <section id="contato">
@@ -96,9 +116,9 @@
         <a
             href="https://br.freepik.com/fotos-gratis/analisando-dados-close-up-da-equipe-de-negocios-jovem-trabalhando-juntos-no-escritorio-criativo-enquanto-jovem-apontando-os-dados-apresentados-no-grafico-com-caneta_9277164.htm#query=assessoria%20em%20TI&position=0&from_view=search&track=ais">Imagem
             de standret</a> no Freepik
+        <script src="./assets/js/swiper/9.2.4/swiper-bundle.min.js"></script>
         <script src="./assets/js/main.js"></script>
         <script src="./assets/js/carroussel.js"></script>
-        <script src="./assets/js/Hammer.min.js"></script>
         <script src="./assets/js/theme.js"></script>
     </footer>
 </body>
